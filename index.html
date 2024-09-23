@@ -35,14 +35,14 @@
                 </div>
             </div>
             <div class="text-center py-10 space-x-3">
-                <button class="bg-lime-300 font-semibold text-xl rounded-xl py-2 px-5">Donation</button>
-                <button class="font-semibold text-xl rounded-xl py-2 px-5 border-2 border-gray-300">History</button>
+                <button id="show-donation-btn" class="bg-lime-300 border-2 border-gray-300 font-semibold text-xl rounded-xl py-2 px-5">Donation</button>
+                <button id="show-history-btn" class="font-semibold text-xl rounded-xl py-2 px-5 border-2 border-gray-300">History</button>
             </div>
         </nav>
     </header>
     <main class="w-[90%] lg:w-[80%] mx-auto">
         <!-- card container start -->
-        <div class="space-y-6">
+        <div id="donation-contanier" class="space-y-6">
             <!-- card 1 start -->
             <div
                 class="gap-5 flex flex-col lg:flex-row lg:justify-between items-center p-5 border-2 border-gray-200 rounded-xl">
@@ -139,13 +139,15 @@
         </div>
         <!-- card-container-end -->
         <!-- history-container-start -->
-        <div id="history-container" class="space-y-5">
+        <div id="history-container" class="space-y-5 hidden">
             
         </div>
         <!-- history-container-end -->
     </main>
+    
     <script src="utilities.js"></script>
     <script src="scrit.js"></script>
+    <script src="function.js"></script>
 </body>
 
 </html>
