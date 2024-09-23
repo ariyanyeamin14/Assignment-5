@@ -6,6 +6,10 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     if (donationNoakhaliInput <= 0 || isNaN(donationNoakhaliInput)) {
         alert('Invalid Donation Input');
         return
+    } 
+    if(donationNoakhaliInput > balance){
+        alert('Sorry! Insufficiant balance');
+        return
     }
 
     const newBalance = balance - donationNoakhaliInput;
@@ -13,6 +17,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 
     const totalDonationOfNoakhali = donationNoakhaliInput + donationOfNoakhali;
     document.getElementById('total-donation-noakhali').innerText = totalDonationOfNoakhali;
+
 
     const date = Date();
     const div = document.createElement('div');
@@ -35,12 +40,18 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
         alert('Invalid Donation Input');
         return
     }
+    if(donationFeniInput > balance){
+        alert('Sorry! Insufficiant balance');
+        return
+    }
 
     const newBalance = balance - donationFeniInput;
     document.getElementById('balance').innerText = newBalance;
 
     const totalDonationOfFeni = donationFeniInput + donationOfFeni;
     document.getElementById('total-donation-feni').innerText = totalDonationOfFeni;
+
+
 
     const date = Date();
     const div = document.createElement('div');
@@ -60,6 +71,10 @@ document.getElementById('btn-donate-movement').addEventListener('click', functio
 
     if (donationMovementInput <= 0 || isNaN(donationMovementInput)) {
         alert('Invalid Donation Input');
+        return
+    }
+    if(donationMovementInput > balance){
+        alert('Sorry! Insufficiant balance');
         return
     }
 
