@@ -13,6 +13,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        #nav-bar, header {
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(20px);
+        }
+
         body {
             font-family: "Roboto", sans-serif;
         }
@@ -20,9 +25,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="sticky top-0 bg-blend-screen">
         <nav>
-            <div class=" bg-orange-50 py-5 ">
+            <div id="nav-bar" class=" bg-orange-50 py-5">
                 <div class=" flex justify-between items-center w-[85%] mx-auto">
                     <div><button class="bg-lime-300 px-5 py-2 font-semibold text-xl rounded-xl">Blog</button></div>
                     <div class="flex justify-between items-center gap-2"><img src="assets/logo.png" alt="">
@@ -35,8 +40,10 @@
                 </div>
             </div>
             <div class="text-center py-10 space-x-3">
-                <button id="show-donation-btn" class="bg-lime-300 border-2 border-gray-300 font-semibold text-xl rounded-xl py-2 px-5">Donation</button>
-                <button id="show-history-btn" class="font-semibold text-xl rounded-xl py-2 px-5 border-2 border-gray-300">History</button>
+                <button id="show-donation-btn"
+                    class="bg-lime-300 border-2 border-gray-300 font-semibold text-xl rounded-xl py-2 px-5">Donation</button>
+                <button id="show-history-btn"
+                    class="font-semibold text-xl rounded-xl py-2 px-5 border-2 border-gray-300">History</button>
             </div>
         </nav>
     </header>
@@ -67,9 +74,11 @@
                     </div>
                     <div><input id="donation-noakhali-input" class=" w-full p-3 rounded-xl border-2 border-gray-200"
                             placeholder="Write Donation Ammount" type="text" name="" id=""></div>
-                    <div><button id="btn-donate-noakhali"
+                    <div><button id="btn-donate-noakhali" onclick="my_modal_1.showModal()"
                             class="py-3 block w-full bg-lime-300 text-xl font-semibold rounded-xl">Donate
-                            Now</button></div>
+                            Now
+                        </button>
+                    </div>
                 </div>
                 <!-- text content end -->
             </div>
@@ -98,7 +107,7 @@
                     </div>
                     <div><input id="donation-feni-input" class=" w-full p-3 rounded-xl border-2 border-gray-200"
                             placeholder="Write Donation Ammount" type="text" name="" id=""></div>
-                    <div><button id="btn-donate-feni"
+                    <div><button id="btn-donate-feni" onclick="my_modal_1.showModal()"
                             class="py-3 block w-full bg-lime-300 text-xl font-semibold rounded-xl">Donate
                             Now</button></div>
                 </div>
@@ -129,22 +138,38 @@
                     </div>
                     <div><input id="donation-movement-input" class=" w-full p-3 rounded-xl border-2 border-gray-200"
                             placeholder="Write Donation Ammount" type="text" name="" id=""></div>
-                    <div><button id="btn-donate-movement"
+                    <div><button id="btn-donate-movement" onclick="my_modal_1.showModal()"
                             class="py-3 block w-full bg-lime-300 text-xl font-semibold rounded-xl">Donate
-                            Now</button></div>
+                            Now
+                        </button></div>
                 </div>
                 <!-- text content end -->
             </div>
             <!-- card 3 end -->
+
         </div>
         <!-- card-container-end -->
         <!-- history-container-start -->
         <div id="history-container" class="space-y-5 hidden">
-            
+
         </div>
         <!-- history-container-end -->
     </main>
-    
+
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <h3 class="text-xl font-bold text-center">Congrates!</h3>
+            <img class="mx-auto mt-4" src="assets/coin.png" alt="">
+            <p class="py-4 text-center">You have donated for Humankind</p>
+            <div class="modal-action ">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
     <script src="utilities.js"></script>
     <script src="scrit.js"></script>
     <script src="function.js"></script>
