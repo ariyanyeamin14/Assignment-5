@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en " data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #nav-bar, header {
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(20px);
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky top-0 bg-blend-screen">
+        <nav>
+            <div id="nav-bar" class=" bg-orange-50 py-5">
+                <div class=" flex justify-between items-center w-[85%] mx-auto">
+                    <div><a href="./index.html"><button class="bg-lime-300 px-5 py-2 font-semibold text-xl rounded-xl">Home</button></a></div>
+                    <div class="flex justify-between items-center gap-2"><img src="assets/logo.png" alt="">
+                        <h3 class="text-xl font-semibold">Donate Bangladesh</h3>
+                    </div>
+                    <div class="flex justify-between gap-4 items-center">
+                        <img src="assets/coin.png" alt="">
+                        <div class="text-xl font-semibold"><span id="balance">5500</span> <span>BDT</span></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="w-[90%] lg:w-[80%] mx-auto ">
+        <h1 class=" py-5 text-3xl font-semibold">Important FAQ</h1>
+        <div class="join join-vertical w-full ">
+            <div class="py-5 collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)</div>
+              <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.</p>
+              </div>
+            </div>
+            <div class="py-5 collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you select element from Dom</div>
+              <div class="collapse-content">
+                <p>Use an ID to Select an Element with .getElementById()
+                    Use a CSS Selector to Select an Element with .querySelector()
+                    Use a CSS Selector to Select Multiple Elements with .querySelectorAll()
+                    Other Ways to Select Elements</p>
+              </div>
+            </div>
+            <div class="py-5 collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">what is event delegation in dom</div>
+              <div class="collapse-content">
+                <p>the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated.</p>
+              </div>
+            </div>
+            <div class="py-5 collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">how do you manipulate the element dom using javascript</div>
+              <div class="collapse-content">
+                <p>Take a local copy of the dom-example. ...
+                    Add a "script" element just above the closing "body" tag.
+                    To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable.</p>
+              </div>
+            </div>
+          </div>
+    </main>
+   </body>
+
+</html>
