@@ -12,6 +12,8 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
         return
     }
 
+    my_modal_1.showModal();
+
     const newBalance = balance - donationNoakhaliInput;
     document.getElementById('balance').innerText = newBalance;
 
@@ -44,6 +46,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
         alert('Sorry! Insufficiant balance');
         return
     }
+    my_modal_1.showModal();
 
     const newBalance = balance - donationFeniInput;
     document.getElementById('balance').innerText = newBalance;
@@ -77,6 +80,7 @@ document.getElementById('btn-donate-movement').addEventListener('click', functio
         alert('Sorry! Insufficiant balance');
         return
     }
+    my_modal_1.showModal();
 
     const newBalance = balance - donationMovementInput;
     document.getElementById('balance').innerText = newBalance;
